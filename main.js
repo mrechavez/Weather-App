@@ -13,3 +13,38 @@ const form = document.querySelector('.locationInput');
 const search = document.querySelector('.search');
 const btn = document.querySelector('.submit');
 const cities = document.querySelector('.city');
+
+//Default city when the page loads
+let cityInput = "London";
+
+//Add click event to each city in the panel
+cities.forEach((city) => {
+    city.addEventListener('click', (e) => {
+        //Change from default city to the clicked one
+        cityInput = e.target.innerHTML;
+        /*Function that fetches and displays all the data from the Weatrher API*/
+        fetchWeatherData();
+        //Fade out the app (simple animation)
+        app.style.opacity = "0";
+    });
+})
+
+//Add submit event to the form
+form.addEventListener('submit', (e) => {
+    /*If the input field (search bar) is empty, throw and alert*/
+    if(search.ariaValueMax.length == 0) {
+        alert('Please type in a city name');
+    } else {
+        /*Change from default city to the one written in the input field*/
+        cityInput = search.value;
+        /*Function that fetches and displays all the data from the Weather API*/
+        fetchWeatherData();
+        //Remove all text from the Input field
+        search.value = "";
+        //Fade out the app (simple animation)
+        app.style.opacity = "0";
+    }
+
+    //Prevents the default behaviour of the form
+    e.preventDefault();
+});
