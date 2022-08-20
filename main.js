@@ -48,3 +48,17 @@ form.addEventListener('submit', (e) => {
     //Prevents the default behaviour of the form
     e.preventDefault();
 });
+
+/*Function that returns a day of the week (Monday, Tuesday, Friday...) from a date (12 03 2021)*/
+function dayOfTheWeek(day, month, year) {
+    const weekday = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+    ];
+    return weekday[new Data('${day}/${month}/${year}').getDay()];
+};
