@@ -152,7 +152,7 @@ h1, h3 {
 
 .city {
     display: block;
-    color: #fff;
+    cursor: pointer;
 }
 
 .city:hover {
