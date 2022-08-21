@@ -32,7 +32,7 @@ cities.forEach((city) => {
 //Add submit event to the form
 form.addEventListener('submit', (e) => {
     /*If the input field (search bar) is empty, throw and alert*/
-    if(search.ariaValueMax.length == 0) {
+    if(search.value.length == 0) {
         alert('Please type in a city name');
     } else {
         /*Change from default city to the one written in the input field*/
@@ -60,7 +60,7 @@ function dayOfTheWeek(day, month, year) {
         "Friday",
         "Saturday"
     ];
-    return weekday[new Data(`${day}/${month}/${year}`).getDay()];
+    return weekday[new Date(`${day}/${month}/${year}`).getDay()];
 };
 
 /*Function that fetches and displays all the data from the Weather API*/
@@ -76,7 +76,7 @@ fetch(`http://api.weatherapi.com/v1/current.json?key=976e1465749441be92321500922
 
         /*Adds temperature and weather condition to the page*/
         temp.innerHTML = data.current.temp_c + "&#176;";
-        conditionOutput.innerHTML - data.current.condition.text;
+        conditionOutput.innerHTML = data.current.condition.text;
 
         /*Get the date and time from the city and extract the day, month, year, and time into individual variables*/
         const date = data.location.localtime;
