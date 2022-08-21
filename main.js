@@ -1,7 +1,7 @@
 //Get all necessary elements from the DOM
 const app = document.querySelector('.weather-app');
 const temp = document.querySelector('.temp');
-const dateOutput = document.querySelector('date');
+const dateOutput = document.querySelector('.date');
 const timeOutput = document.querySelector('.time');
 const conditionOutput = document.querySelector('.condition');
 const nameOutput = document.querySelector('.name');
