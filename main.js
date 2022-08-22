@@ -162,7 +162,7 @@ fetch(`http://api.weatherapi.com/v1/current.json?key=976e1465749441be92321500922
             code == 1249 ||
             code == 1252
         ) {
-            app.style.background = `url(./images${timeOfDay}/rainy.jpg)`;
+            app.style.backgroundImage = `url(./images${timeOfDay}/rainy.jpg)`;
             btn.style.background = "#647d75";
             if(timeOfDay == "night") {
                 btn.style.background = "#325c80";
