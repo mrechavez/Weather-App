@@ -21,7 +21,7 @@ h1, h3 {
     color: #fff;
     position: relative;
     transition: 500ms;
-    opacity: 1; /* change to '0' once the whole app is finished */
+    opacity: 0; /* change to '0' once the whole app is finished */
 }
 
 /* Add background overlay*/
