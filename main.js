@@ -9,7 +9,7 @@ const icon = document.querySelector('.icon');
 const cloudOutput = document.querySelector('.cloud');
 const humidityOutput = document.querySelector('.humidity');
 const windOutput = document.querySelector('.wind');
-const form = document.querySelector('.locationInput');
+const form = document.getElementById('locationInput');
 const search = document.querySelector('.search');
 const btn = document.querySelector('.submit');
 const cities = document.querySelectorAll('.city');
@@ -99,7 +99,7 @@ fetch(`http://api.weatherapi.com/v1/current.json?key=976e1465749441be92321500922
 
         //Adds weather details to the page
         cloudOutput.innerHTML = data.current.cloud + "%";
-        humidityOutput.innerHTML = data.current.hunidity + "%";
+        humidityOutput.innerHTML = data.current.humidity + "%";
         windOutput.innerHTML = data.current.wind_kph + "km/h";
 
         //Set default time of day 
