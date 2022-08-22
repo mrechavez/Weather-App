@@ -169,7 +169,7 @@ fetch(`http://api.weatherapi.com/v1/current.json?key=976e1465749441be92321500922
             }
             /*And Snow*/
         }   else {
-            app.style.background = `url(./images/${timeOfDay}/snowy.jpg)`;
+            app.style.backgroundImage = `url(./images/${timeOfDay}/snowy.jpg)`;
             btn.style.background = "#4d72aa";
             if(timeOfDay == "night") {
                 btn.style.background = "#1b1b1b";
